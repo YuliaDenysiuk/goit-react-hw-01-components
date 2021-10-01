@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import defaultImage from "../default.jpg";
 
 function Profile({ name, tag, location, avatar, stats }) {
   return (
@@ -27,6 +28,10 @@ function Profile({ name, tag, location, avatar, stats }) {
     </div>
   );
 }
+
+Profile.defaultProps = {
+  avatar: defaultImage,
+};
 
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
